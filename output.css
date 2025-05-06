@@ -291,6 +291,9 @@
   .min-h-\[80vh\] {
     min-height: 80vh;
   }
+  .min-h-\[100vh\] {
+    min-height: 100vh;
+  }
   .w-6 {
     width: calc(var(--spacing) * 6);
   }
