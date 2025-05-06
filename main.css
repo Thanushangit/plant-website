@@ -2,25 +2,86 @@
 
 @import "tailwindcss";
 
-.jost{
+.jost {
     @theme {
-        --font-jost: "Jost", sans-serif; 
-        --font-lobster:"Lobster", sans-serif;
-      }
+        --font-jost: "Jost", sans-serif;
+        --font-lobster: "Lobster", sans-serif;
+    }
 }
 
-body{
+body {
     @apply bg-green-950 text-white tracking-wider
 }
 
-.nav-link{
+.nav-link {
     @apply text-lg font-bold duration-300
 }
 
-.nav-link:hover{
+.nav-link:hover {
     @apply text-yellow-500
 }
 
-.container{
+.container {
     @apply mx-auto p-3.5
 }
+
+h1 {
+    @apply text-3xl md:text-4xl xl:text-5xl font-bold
+}
+
+section {
+    @apply p-3.5 py-20 md:py-28
+}
+
+.btn {
+    @apply border border-yellow-500 bg-yellow-500 rounded-md px-5 py-2 duration-300 hover:bg-yellow-600 cursor-pointer
+}
+
+.btn span {
+    @apply font-bold
+}
+
+.btn_outline {
+    @apply bg-transparent
+}
+
+
+@keyframes move {
+    50% {
+        transform: translateY(-1rem);
+    }
+}
+
+@keyframes rotatee {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes scalee {
+    0% {
+        transform: scale(0.8);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+.movingY {
+    animation: move 3s linear infinite;
+}
+
+.rotating {
+    animation: rotatee 5s linear infinite;
+}
+
+.scaling {
+    animation: scalee 3s linear infinite;
+}
+
